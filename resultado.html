@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>TP Viajes - Resultado</title>
+    <link rel="stylesheet" href="styles2.css">
+</head>
+<body>
+
+    <center>
+        <div class="caja-formulario" style="width: 850px; margin-top: 50px;">
+            <h3>Resumen de tu Cotización</h3>
+            <p id="resumen-destino"></p>
+            <p id="resumen-gasto"></p>
+            <p id="resumen-recomendacion" style="color: #ff9f43; font-weight: bold; font-size: 18px;"></p>
+            
+            <br>
+            <img id="imagen-viaje" src="" alt="Foto del destino" class="foto-destino">
+            <br><br>
+
+            <button onclick="volverAtras()">Volver a Planificar</button>
+        </div>
+    </center>
+
+    <script src="script.js"></script>
+    
+    <script>
+        var destinoSeleccionado = localStorage.getItem("dest");
+        var tipoViaje = localStorage.getItem("tipo");
+        var diasViaje = localStorage.getItem("cantDias");
+        var totalGasto = localStorage.getItem("total");
+        var recomendacion = localStorage.getItem("recom");
+
+        document.getElementById("resumen-destino").textContent = "Destino elegido: " + destinoSeleccionado + " (" + tipoViaje + ")";
+        document.getElementById("resumen-gasto").textContent = "Gasto total por " + diasViaje + " días: " + totalGasto + " dólares";
+        document.getElementById("resumen-recomendacion").textContent = "Lugar recomendado para ir: " + recomendacion;
+
+        var cajaImagen = document.getElementById("imagen-viaje");
+
+        if (destinoSeleccionado == "Miami / Ibiza") {
+            cajaImagen.src = "miami.jpg";
+        }
+        if (destinoSeleccionado == "Maldivas") {
+            cajaImagen.src = "maldivas.jpg";
+        }
+        if (destinoSeleccionado == "Cancún") {
+            cajaImagen.src = "cancun.jpg";
+        }
+        if (destinoSeleccionado == "Roma") {
+            cajaImagen.src = "roma.jpg";
+        }
+        if (destinoSeleccionado == "Patagonia") {
+            cajaImagen.src = "patagonia.jpg";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+body {
+    background-color: #0f172a;
+    color: white;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    padding-top: 30px;
+}
+
+h1, h2, h3 {
+    text-align: center;
+    color: #38bdf8;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.div-login {
+    text-align: center;
+    padding-top: 70px;
+}
+
+.caja-formulario {
+    background-color: #1e293b;
+    border: 2px solid #38bdf8;
+    border-radius: 12px;
+    padding: 25px;
+    margin: 15px;
+    color: white;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 15px rgba(56, 189, 248, 0.2);
+}
+
+button {
+    background-color: #38bdf8;
+    color: #0f172a;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #0ea5e9;
+    color: white;
+}
+
+input, select {
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 6px;
+    border: 1px solid #38bdf8;
+    background-color: #0f172a;
+    color: white;
+    width: 95%;
+}
+
+input:focus, select:focus {
+    outline: 2px solid #0ea5e9;
+}
+
+.foto-destino {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
+    border: 3px solid #38bdf8;
+    border-radius: 12px;
+    margin-top: 15px;
+    box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.6);
+}

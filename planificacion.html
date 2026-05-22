@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>TP Viajes - Planificación</title>
+    <link rel="stylesheet" href="styles2.css">
+</head>
+<body>
+
+    <center>
+        <h1>Planificá tu próximo viaje</h1>
+        <img src="pantalla.jpg" alt="Banner Viajes" class="foto-destino" style="max-width: 80%; height: 150px; object-fit: cover; margin-bottom: 20px;">
+    </center>
+    
+    <table border="0" align="center" width="80%">
+        <tr>
+            <td width="50%" valign="top">
+                <div class="caja-formulario">
+                    <h3>Datos del Traveler</h3>
+                    <p>Nombre: <input type="text" id="nombre"></p>
+                    <p>Apellido: <input type="text" id="apellido"></p>
+                    <p>Edad: <input type="number" id="edad"></p>
+                    <p>Fecha: <input type="date" id="fecha"></p>
+                    <p>Email: <input type="email" id="email"></p>
+                    <p>Género: 
+                        <select id="genero">
+                            <option value="M">Masculino</option>
+                            <option value="F">Femenino</option>
+                            <option value="O">Otro</option>
+                        </select>
+                    </p>
+                    <button onclick="afiliarUsuario()">Afiliar</button>
+                    <p id="resultado-afiliacion" style="color: blue; font-weight: bold;"></p>
+                </div>
+            </td>
+
+            <td width="50%" valign="top">
+                <div class="caja-formulario">
+                    <h3>Cotizar viaje</h3>
+                    <p>Destino: 
+                        <select id="destino">
+                            <option value="Miami / Ibiza">Miami / Ibiza</option>
+                            <option value="Maldivas">Maldivas</option>
+                            <option value="Cancún">Cancún</option>
+                            <option value="Roma">Roma</option>
+                            <option value="Patagonia">Patagonia</option>
+                        </select>
+                    </p>
+                    <p>Tipo de viaje: 
+                        <select id="tipo-viaje">
+                            <option value="Fiesta">Fiesta</option>
+                            <option value="Relax">Relax</option>
+                            <option value="Playa">Playa</option>
+                            <option value="Cultural">Cultural</option>
+                            <option value="Aventura">Aventura</option>
+                        </select>
+                    </p>
+                    <p>Cantidad de días: <input type="number" id="dias"></p>
+                    <p>Presupuesto por día (USD): <input type="number" id="presupuesto-diario"></p>
+                    <button onclick="cotizarViaje()">Cotizar viaje</button>
+                </div>
+            </td>
+        </tr>
+    </table>
+
+    <script src="script.js"></script>
+</body>
+</html>
